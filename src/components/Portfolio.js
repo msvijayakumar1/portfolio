@@ -101,7 +101,7 @@ export function Portfolio(){
             <a href="https://github.com/msvijayakumar1/E-commerce" target="_blank" rel="noreferrer">
               <img src={githubIcon} alt="GitHub" />
             </a> 
-            <a href="https://classy-genie-e3c479.netlify.app" target="_blank" rel="noreferrer">
+            <a href="https://e-commerce-121.netlify.app" target="_blank" rel="noreferrer">
                 <img src={externalLinkIcon} alt="Visitar site" />
               </a>
           </div>
@@ -130,7 +130,7 @@ export function Portfolio(){
               <a href="https://github.com/msvijayakumar1/Chatapp-Fe" target="_blank" rel="noreferrer">
                 <img src={githubIcon} alt="GitHub" />
               </a>
-              <a href="https://magenta-pasca-4adc10.netlify.app" target="_blank" rel="noreferrer">
+              <a href="https://chatapp-121.netlify.app" target="_blank" rel="noreferrer">
                 <img src={externalLinkIcon} alt="Visitar site" />
               </a>
             </div>
@@ -160,7 +160,7 @@ with other user who were loggedin.
             <a href="https://github.com/msvijayakumar1/Blogapp" target="_blank" rel="noreferrer">
                 <img src={githubIcon} alt="GitHub" />
               </a>
-              <a href="https://coruscating-baklava-aeb9ac.netlify.app" target="_blank" rel="noreferrer">
+              <a href="https://blogapp-121.netlify.app" target="_blank" rel="noreferrer">
                 <img src={externalLinkIcon} alt="Visitar site" />
               </a>
             </div>
@@ -217,7 +217,7 @@ with other user who were loggedin.
             <a href="https://github.com/msvijayakumar1/nationalize-web-code" target="_blank" rel="noreferrer">
                 <img src={githubIcon} alt="GitHub" />
               </a>
-              <a href="https://eloquent-truffle-6ab6d5.netlify.app" target="_blank" rel="noreferrer">
+              <a href="https://nationalize-121.netlify.app" target="_blank" rel="noreferrer">
                 <img src={externalLinkIcon} alt="Visitar site" />
               </a>
             </div>
