@@ -1,5 +1,5 @@
- import React, { useState } from "react";
-import { send } from "emailjs-com";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import styled from "styled-components";
 
 
@@ -54,60 +54,37 @@ const Container = styled.div`
 `
 export function Form(){
 
-    const [senderEmail, setSenderEmail] = useState("");
-    const [message, setMessage] = useState("");
-  
-    const sendMail = (e) => {
-      e.preventDefault();
-      send(
-        "service_j9szejs",
-        "template_rzgsvsc",
-        { senderEmail, message },
-        "adVNewC1-YMu5TORn"
-      )
-        .then((response) => {
-          const div = document.getElementById("sent");
-          div.textContent = "Message sent successfully :)";
-          setSenderEmail("");
-          setMessage("");
-        })
-        .catch((err) => {
-          const div = document.getElementById("error");
-          div.textContent = "OOPS! Unknown error occured. Try again later :(";
-        });
-    };
-  
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_j9szejs', 'template_rzgsvsc', form.current, 'adVNewC1-YMu5TORn')
+      .then((result) => {
+          console.log(result.text);
+        const div =result
+         div.textContent = "Message sent successfully :)";
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
+  };
+ 
   return(
-    <Container>
+    <Container>    
       <h2>Get in touch using the form below</h2>
-      <form onSubmit={sendMail}>
-        <input
-          placeholder="Email"
-          id="email"
-          type="email" 
-          name="sender_email"
-          value={senderEmail}
-          onChange={(e) => {
-            setSenderEmail(e.target.value);
-          }}
-          required
-        />
-        
-        <textarea
-          placeholder="Leave your message"
-          id="message"
-          name="message"
-          value={message}
-          onChange={(e) => {
-            setMessage(e.target.value);
-          }}
-          required
-        />
-       
-        <button type="submit" onClick={sendMail}>
+
+      <form ref={form} onSubmit={sendEmail}>
+      <input 
+      placeholder='Email'
+      type="email" 
+      name="user_email"/>
+      <textarea 
+      placeholder='Leave your Message'
+      name="message" />
+      <button type="submit" onClick={sendEmail}>
           Send Message
         </button>
-    </form>
+    </form>  
     </Container>
-  )
-}
+  );
+};
