@@ -188,7 +188,7 @@ export function Header(){
             <NavHashLink smooth to="#about" onClick={closeMenu}>About Me</NavHashLink>
             <NavHashLink smooth to="#portfolio" onClick={closeMenu}>Portfolio</NavHashLink>
             <NavHashLink smooth to="#contact" onClick={closeMenu}>Contact</NavHashLink>
-            <a href="https://drive.google.com/file/d/1xiFYXWgboAT3vg7zgV9MzmE3fCTd5bC5/view?usp=share_link" target="_blank" rel="noreferrer" download className="button">CV</a>
+            <a href="https://drive.google.com/file/d/1sZvmBK0YWgBC-gJ2zTjlCuxy9Id5l-Qv/view?usp=share_link" target="_blank" rel="noreferrer" download className="button">CV</a>
           </nav>
 
           <div
