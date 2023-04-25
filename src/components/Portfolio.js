@@ -137,7 +137,8 @@ export function Portfolio(){
             </header>
             <div className="body">
               <h3>AWS-polymersearchclone</h3>
-              <p>This app used to search AWS polymer 
+              <p>Polymer search is designed to compare polymers using their source- or structure-based representation. Polymers can be stored in tables of molecule type.
+
               </p>
             </div>
             <footer>
